@@ -16,7 +16,7 @@ import {
   SlideRight,
   SlideUp,
   SlideBottom,
-} from "../../utility/animation.js";
+} from "../../utility/Animation.js";
 
 const courses = [
   {

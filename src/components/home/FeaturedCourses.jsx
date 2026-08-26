@@ -1,5 +1,5 @@
-
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FiStar,
   FiClock,
@@ -7,6 +7,13 @@ import {
   FiArrowRight,
   FiHeart,
 } from "react-icons/fi";
+
+import {
+  SlideLeft,
+  SlideRight,
+  SlideUp,
+  SlideBottom,
+} from "../../utility/animation.js";
 
 const courses = [
   {
@@ -61,19 +68,33 @@ const courses = [
 
 const FeaturedCourses = () => {
   return (
-    <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
 
         {/* Section Header */}
-        <div className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+        <motion.div
+          variants={SlideUp(0.2)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between"
+        >
           <div>
-            <span className="mb-3 inline-block rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-600">
+            <motion.span
+              variants={SlideLeft(0.3)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+              className="mb-3 inline-block rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-600"
+            >
               Featured Courses
-            </span>
+            </motion.span>
 
             <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
               Learn From the{" "}
-              <span className="text-indigo-600">Best Courses</span>
+              <span className="text-indigo-600">
+                Best Courses
+              </span>
             </h2>
 
             <p className="mt-4 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg">
@@ -82,19 +103,31 @@ const FeaturedCourses = () => {
             </p>
           </div>
 
-          <button className="group flex w-fit items-center gap-2 font-semibold text-indigo-600 transition hover:text-indigo-800">
+          <motion.button
+            variants={SlideRight(0.4)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            className="group flex w-fit items-center gap-2 font-semibold text-indigo-600 transition hover:text-indigo-800"
+          >
             View All Courses
+
             <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
 
         {/* Courses Grid */}
         <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
-          {courses.map((course) => (
-            <div
+          {courses.map((course, index) => (
+            <motion.div
               key={course.id}
+              variants={SlideUp(0.2 + index * 0.1)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.15 }}
               className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
+
               {/* Image */}
               <div className="relative h-52 overflow-hidden">
                 <img
@@ -122,6 +155,7 @@ const FeaturedCourses = () => {
 
               {/* Content */}
               <div className="p-5">
+
                 <h3 className="line-clamp-2 min-h-[56px] text-lg font-bold leading-7 text-slate-900 transition-colors group-hover:text-indigo-600">
                   {course.title}
                 </h3>
@@ -134,6 +168,7 @@ const FeaturedCourses = () => {
                 <div className="mt-4 flex items-center gap-2">
                   <div className="flex items-center gap-1">
                     <FiStar className="fill-yellow-400 text-yellow-400" />
+
                     <span className="text-sm font-bold text-slate-800">
                       {course.rating}
                     </span>
@@ -146,6 +181,7 @@ const FeaturedCourses = () => {
 
                 {/* Course Info */}
                 <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-4 text-xs text-slate-500">
+
                   <div className="flex items-center gap-1.5">
                     <FiClock />
                     {course.duration}
@@ -155,10 +191,12 @@ const FeaturedCourses = () => {
                     <FiUsers />
                     {course.students}
                   </div>
+
                 </div>
 
                 {/* Price */}
                 <div className="mt-5 flex items-center justify-between">
+
                   <div className="flex items-center gap-2">
                     <span className="text-2xl font-bold text-slate-900">
                       {course.price}
@@ -169,12 +207,17 @@ const FeaturedCourses = () => {
                     </span>
                   </div>
 
-                  <button className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-50 text-indigo-600 transition-all duration-300 hover:bg-indigo-600 hover:text-white">
+                  <button
+                    aria-label={`View ${course.title}`}
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-50 text-indigo-600 transition-all duration-300 hover:bg-indigo-600 hover:text-white"
+                  >
                     <FiArrowRight size={18} />
                   </button>
+
                 </div>
+
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -184,4 +227,3 @@ const FeaturedCourses = () => {
 };
 
 export default FeaturedCourses;
-

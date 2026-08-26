@@ -1,11 +1,18 @@
-
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FiStar,
   FiUsers,
   FiArrowRight,
   FiAward,
 } from "react-icons/fi";
+
+import {
+  SlideLeft,
+  SlideRight,
+  SlideUp,
+  SlideBottom,
+} from "../../utility/animation.js";
 
 const instructors = [
   {
@@ -51,44 +58,114 @@ const PopularInstructors = () => {
     <section className="bg-slate-50 px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
 
-        {/* Header */}
+        {/* ================= HEADER ================= */}
         <div className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-          <div>
-            <span className="mb-3 inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-600">
+
+          {/* Header Content */}
+          <motion.div
+            variants={SlideLeft(0.2)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            {/* Badge */}
+            <motion.span
+              variants={SlideRight(0.3)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+              className="mb-3 inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-600"
+            >
               <FiAward />
               Expert Instructors
-            </span>
+            </motion.span>
 
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+            {/* Heading */}
+            <motion.h2
+              variants={SlideUp(0.4)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+              className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl"
+            >
               Learn From{" "}
-              <span className="text-indigo-600">Top Instructors</span>
-            </h2>
+              <span className="text-indigo-600">
+                Top Instructors
+              </span>
+            </motion.h2>
 
-            <p className="mt-4 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg">
+            {/* Description */}
+            <motion.p
+              variants={SlideBottom(0.5)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+              className="mt-4 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg"
+            >
               Meet our experienced instructors and learn from professionals
               who are passionate about helping students succeed.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
-          <button className="group flex w-fit items-center gap-2 font-semibold text-indigo-600 transition hover:text-indigo-800">
+          {/* View All Button */}
+          <motion.button
+            variants={SlideRight(0.5)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            type="button"
+            className="group flex w-fit items-center gap-2 font-semibold text-indigo-600 transition hover:text-indigo-800"
+          >
             View All Instructors
+
             <FiArrowRight
               className="transition-transform duration-300 group-hover:translate-x-1"
             />
-          </button>
+          </motion.button>
+
         </div>
 
-        {/* Instructor Grid */}
+        {/* ================= INSTRUCTOR GRID ================= */}
         <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
-          {instructors.map((instructor) => (
-            <div
-              key={instructor.id}
-              className="group overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-            >
-              {/* Instructor Image */}
-              <div className="relative mx-auto mb-5 h-32 w-32">
-                <div className="absolute inset-0 rounded-full bg-indigo-100 transition duration-300 group-hover:scale-110" />
 
+          {instructors.map((instructor, index) => (
+            <motion.div
+              key={instructor.id}
+              variants={
+                index % 2 === 0
+                  ? SlideLeft(0.2 + index * 0.1)
+                  : SlideRight(0.2 + index * 0.1)
+              }
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.15 }}
+              whileHover={{
+                y: -8,
+              }}
+              transition={{
+                duration: 0.3,
+              }}
+              className="group overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:shadow-xl"
+            >
+
+              {/* ================= INSTRUCTOR IMAGE ================= */}
+              <motion.div
+                variants={SlideUp(0.3 + index * 0.08)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.15 }}
+                className="relative mx-auto mb-5 h-32 w-32"
+              >
+                {/* Image Background */}
+                <motion.div
+                  whileHover={{
+                    scale: 1.1,
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute inset-0 rounded-full bg-indigo-100"
+                />
+
+                {/* Instructor Image */}
                 <img
                   src={instructor.image}
                   alt={instructor.name}
@@ -96,37 +173,71 @@ const PopularInstructors = () => {
                 />
 
                 {/* Verified Badge */}
-                <div className="absolute bottom-1 right-1 flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 text-white ring-4 ring-white">
+                <motion.div
+                  whileHover={{
+                    scale: 1.15,
+                    rotate: 10,
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute bottom-1 right-1 flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 text-white ring-4 ring-white"
+                >
                   <FiAward size={15} />
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
 
-              {/* Name */}
-              <h3 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-indigo-600">
+              {/* ================= NAME ================= */}
+              <motion.h3
+                variants={SlideUp(0.4 + index * 0.08)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.15 }}
+                className="text-xl font-bold text-slate-900 transition-colors group-hover:text-indigo-600"
+              >
                 {instructor.name}
-              </h3>
+              </motion.h3>
 
               {/* Role */}
               <p className="mt-1 text-sm font-medium text-slate-500">
                 {instructor.role}
               </p>
 
-              {/* Rating */}
-              <div className="mt-4 flex items-center justify-center gap-2">
+              {/* ================= RATING ================= */}
+              <motion.div
+                variants={SlideUp(0.5 + index * 0.08)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.15 }}
+                className="mt-4 flex items-center justify-center gap-2"
+              >
                 <div className="flex items-center gap-1 rounded-full bg-yellow-50 px-3 py-1">
-                  <FiStar className="fill-yellow-400 text-yellow-400" size={15} />
+                  <FiStar
+                    className="fill-yellow-400 text-yellow-400"
+                    size={15}
+                  />
 
                   <span className="text-sm font-bold text-slate-800">
                     {instructor.rating}
                   </span>
                 </div>
-              </div>
+              </motion.div>
 
-              {/* Stats */}
-              <div className="mt-5 grid grid-cols-2 divide-x divide-slate-200 border-y border-slate-100 py-4">
+              {/* ================= STATS ================= */}
+              <motion.div
+                variants={SlideBottom(0.5 + index * 0.08)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.15 }}
+                className="mt-5 grid grid-cols-2 divide-x divide-slate-200 border-y border-slate-100 py-4"
+              >
+
+                {/* Students */}
                 <div>
                   <div className="flex items-center justify-center gap-1 text-lg font-bold text-slate-900">
-                    <FiUsers className="text-indigo-600" size={17} />
+                    <FiUsers
+                      className="text-indigo-600"
+                      size={17}
+                    />
+
                     {instructor.students}
                   </div>
 
@@ -135,6 +246,7 @@ const PopularInstructors = () => {
                   </p>
                 </div>
 
+                {/* Courses */}
                 <div>
                   <p className="text-lg font-bold text-slate-900">
                     {instructor.courses}
@@ -144,18 +256,31 @@ const PopularInstructors = () => {
                     Courses
                   </p>
                 </div>
-              </div>
 
-              {/* Button */}
-              <button className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-100 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 group-hover:bg-indigo-600 group-hover:text-white">
+              </motion.div>
+
+              {/* ================= PROFILE BUTTON ================= */}
+              <motion.button
+                whileHover={{
+                  scale: 1.03,
+                }}
+                whileTap={{
+                  scale: 0.97,
+                }}
+                type="button"
+                className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-100 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 group-hover:bg-indigo-600 group-hover:text-white"
+              >
                 View Profile
+
                 <FiArrowRight
                   size={16}
                   className="transition-transform duration-300 group-hover:translate-x-1"
                 />
-              </button>
-            </div>
+              </motion.button>
+
+            </motion.div>
           ))}
+
         </div>
       </div>
     </section>

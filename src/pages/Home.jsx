@@ -7,6 +7,7 @@ import PopularInstructors from "../components/home/PopularInstructors";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import LearningStats from "../components/home/LearningStats";
 import Testimonials from "../components/home/Testimonials";
+import BecomeInstructor from "../components/home/BecomeInstructor";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <WhyChooseUs/>
       <LearningStats/>
       <Testimonials/>
+      <BecomeInstructor/>
       
     </>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   FiFacebook,
   FiTwitter,
@@ -10,20 +11,43 @@ import {
   FiMapPin,
 } from "react-icons/fi";
 
+const SlideRight = (delay = 0) => ({
+  hidden: {
+    x: 60,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      delay,
+      ease: "easeOut",
+    },
+  },
+});
+
 const Footer = () => {
   return (
     <footer className="bg-slate-950 text-white">
 
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
 
           {/* Brand */}
-          <div>
-            <Link to="/" className="flex items-center gap-2 mb-5">
-              <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">
+          <motion.div
+            variants={SlideRight(0.1)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <Link
+              to="/"
+              className="mb-5 flex items-center gap-2"
+            >
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600">
+                <span className="text-lg font-bold text-white">
                   E
                 </span>
               </div>
@@ -33,57 +57,69 @@ const Footer = () => {
               </span>
             </Link>
 
-            <p className="text-gray-400 leading-7 max-w-sm">
+            <p className="max-w-sm leading-7 text-gray-400">
               Learn new skills, grow your career, and achieve your goals
               with high-quality online courses from expert instructors.
             </p>
 
             {/* Social Icons */}
-            <div className="flex items-center gap-3 mt-6">
-
+            <motion.div
+              variants={SlideRight(0.2)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              className="mt-6 flex items-center gap-3"
+            >
               <a
                 href="#"
-                className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition"
+                aria-label="Facebook"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 transition hover:bg-indigo-600"
               >
                 <FiFacebook size={18} />
               </a>
 
               <a
                 href="#"
-                className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition"
+                aria-label="Twitter"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 transition hover:bg-indigo-600"
               >
                 <FiTwitter size={18} />
               </a>
 
               <a
                 href="#"
-                className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition"
+                aria-label="Instagram"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 transition hover:bg-indigo-600"
               >
                 <FiInstagram size={18} />
               </a>
 
               <a
                 href="#"
-                className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition"
+                aria-label="LinkedIn"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 transition hover:bg-indigo-600"
               >
                 <FiLinkedin size={18} />
               </a>
-
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-5">
+          <motion.div
+            variants={SlideRight(0.3)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <h3 className="mb-5 text-lg font-semibold">
               Quick Links
             </h3>
 
             <ul className="space-y-3">
-
               <li>
                 <Link
                   to="/"
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-400 transition hover:text-white"
                 >
                   Home
                 </Link>
@@ -92,7 +128,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/courses"
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-400 transition hover:text-white"
                 >
                   Courses
                 </Link>
@@ -101,7 +137,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/instructors"
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-400 transition hover:text-white"
                 >
                   Instructors
                 </Link>
@@ -110,7 +146,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-400 transition hover:text-white"
                 >
                   About Us
                 </Link>
@@ -119,27 +155,30 @@ const Footer = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-400 transition hover:text-white"
                 >
                   Contact
                 </Link>
               </li>
-
             </ul>
-          </div>
+          </motion.div>
 
           {/* Categories */}
-          <div>
-            <h3 className="text-lg font-semibold mb-5">
+          <motion.div
+            variants={SlideRight(0.4)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <h3 className="mb-5 text-lg font-semibold">
               Categories
             </h3>
 
             <ul className="space-y-3">
-
               <li>
                 <Link
                   to="/courses?category=development"
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-400 transition hover:text-white"
                 >
                   Development
                 </Link>
@@ -148,7 +187,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/courses?category=design"
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-400 transition hover:text-white"
                 >
                   Design
                 </Link>
@@ -157,7 +196,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/courses?category=business"
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-400 transition hover:text-white"
                 >
                   Business
                 </Link>
@@ -166,7 +205,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/courses?category=marketing"
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-400 transition hover:text-white"
                 >
                   Marketing
                 </Link>
@@ -175,25 +214,33 @@ const Footer = () => {
               <li>
                 <Link
                   to="/courses?category=photography"
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-400 transition hover:text-white"
                 >
                   Photography
                 </Link>
               </li>
-
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-5">
+          <motion.div
+            variants={SlideRight(0.5)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <h3 className="mb-5 text-lg font-semibold">
               Contact Us
             </h3>
 
             <div className="space-y-4">
 
+              {/* Address */}
               <div className="flex items-start gap-3">
-                <FiMapPin className="text-indigo-400 mt-1" size={18} />
+                <FiMapPin
+                  className="mt-1 shrink-0 text-indigo-400"
+                  size={18}
+                />
 
                 <p className="text-gray-400">
                   123 Learning Street,
@@ -202,68 +249,78 @@ const Footer = () => {
                 </p>
               </div>
 
+              {/* Email */}
               <div className="flex items-center gap-3">
-                <FiMail className="text-indigo-400" size={18} />
+                <FiMail
+                  className="shrink-0 text-indigo-400"
+                  size={18}
+                />
 
                 <a
                   href="mailto:hello@edusphere.com"
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-400 transition hover:text-white"
                 >
                   hello@edusphere.com
                 </a>
               </div>
 
+              {/* Phone */}
               <div className="flex items-center gap-3">
-                <FiPhone className="text-indigo-400" size={18} />
+                <FiPhone
+                  className="shrink-0 text-indigo-400"
+                  size={18}
+                />
 
                 <a
                   href="tel:+1234567890"
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-400 transition hover:text-white"
                 >
                   +1 234 567 890
                 </a>
               </div>
 
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-white/10">
+      <motion.div
+        variants={SlideRight(0.3)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="border-t border-white/10"
+      >
+        <div className="mx-auto max-w-7xl px-6 py-5 lg:px-8">
+          <div className="flex flex-col items-center justify-between gap-3 md:flex-row">
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5">
-
-          <div className="flex flex-col md:flex-row items-center justify-between gap-3">
-
+            {/* Copyright */}
             <p className="text-sm text-gray-500">
               © 2026 EduSphere. All rights reserved.
             </p>
 
+            {/* Legal Links */}
             <div className="flex items-center gap-6 text-sm">
-
               <Link
                 to="/privacy"
-                className="text-gray-500 hover:text-white transition"
+                className="text-gray-500 transition hover:text-white"
               >
                 Privacy Policy
               </Link>
 
               <Link
                 to="/terms"
-                className="text-gray-500 hover:text-white transition"
+                className="text-gray-500 transition hover:text-white"
               >
                 Terms & Conditions
               </Link>
-
             </div>
 
           </div>
-
         </div>
-
-      </div>
+      </motion.div>
 
     </footer>
   );

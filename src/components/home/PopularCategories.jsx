@@ -95,7 +95,7 @@ const PopularCategories = () => {
             variants={SlideLeft(0.2)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="max-w-2xl"
           >
             {/* Badge */}
@@ -103,7 +103,7 @@ const PopularCategories = () => {
               variants={SlideRight(0.3)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="inline-flex rounded-full border border-indigo-100 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-600"
             >
               Explore Categories
@@ -114,7 +114,7 @@ const PopularCategories = () => {
               variants={SlideUp(0.4)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl"
             >
               Learn by
@@ -126,7 +126,7 @@ const PopularCategories = () => {
               variants={SlideBottom(0.5)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="mt-4 text-base leading-7 text-slate-600 sm:text-lg"
             >
               Choose from our most popular learning categories and discover
@@ -139,7 +139,7 @@ const PopularCategories = () => {
             variants={SlideRight(0.5)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             type="button"
             className="group flex w-fit items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-indigo-200 hover:text-indigo-600"
           >
@@ -169,7 +169,7 @@ const PopularCategories = () => {
                 }
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.15 }}
+                viewport={{ once: true, amount: 0.15 }}
                 whileHover={{
                   y: -8,
                 }}
@@ -251,7 +251,7 @@ const PopularCategories = () => {
           variants={SlideUp(0.5)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mt-14 grid grid-cols-2 gap-4 rounded-3xl border border-slate-200 bg-slate-50 p-6 sm:grid-cols-4 sm:p-8"
         >
 
@@ -260,7 +260,7 @@ const PopularCategories = () => {
             variants={SlideBottom(0.2)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="text-center"
           >
             <h3 className="text-2xl font-bold text-slate-900 sm:text-3xl">
@@ -277,7 +277,7 @@ const PopularCategories = () => {
             variants={SlideBottom(0.3)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="text-center"
           >
             <h3 className="text-2xl font-bold text-slate-900 sm:text-3xl">
@@ -294,7 +294,7 @@ const PopularCategories = () => {
             variants={SlideBottom(0.4)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="text-center"
           >
             <h3 className="text-2xl font-bold text-slate-900 sm:text-3xl">
@@ -311,7 +311,7 @@ const PopularCategories = () => {
             variants={SlideBottom(0.5)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="text-center"
           >
             <h3 className="text-2xl font-bold text-slate-900 sm:text-3xl">

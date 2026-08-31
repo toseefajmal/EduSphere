@@ -60,14 +60,14 @@ const WhyChooseUs = () => {
           variants={SlideUp(0.2)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mx-auto max-w-3xl text-center"
         >
           <motion.span
             variants={SlideRight(0.3)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="inline-flex items-center rounded-full border border-indigo-400/20 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-400"
           >
             Why Choose EduSphere?
@@ -77,7 +77,7 @@ const WhyChooseUs = () => {
             variants={SlideLeft(0.4)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
           >
             Everything You Need to{" "}
@@ -90,7 +90,7 @@ const WhyChooseUs = () => {
             variants={SlideBottom(0.5)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-400 sm:text-lg"
           >
             We make online learning simple, flexible and engaging so you can
@@ -114,7 +114,7 @@ const WhyChooseUs = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{
-                  once: false,
+                  once: true,
                   amount: 0.2,
                 }}
                 className="group rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-indigo-500/40 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-indigo-950/40"
@@ -152,7 +152,7 @@ const WhyChooseUs = () => {
           variants={SlideUp(0.5)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mt-16 grid overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] sm:grid-cols-3"
         >
           {/* Stat 1 */}
@@ -160,7 +160,7 @@ const WhyChooseUs = () => {
             variants={SlideLeft(0.2)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="border-b border-white/10 px-6 py-8 text-center sm:border-b-0 sm:border-r"
           >
             <h3 className="text-3xl font-bold text-white">
@@ -177,7 +177,7 @@ const WhyChooseUs = () => {
             variants={SlideUp(0.3)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="border-b border-white/10 px-6 py-8 text-center sm:border-b-0 sm:border-r"
           >
             <h3 className="text-3xl font-bold text-white">
@@ -194,7 +194,7 @@ const WhyChooseUs = () => {
             variants={SlideRight(0.4)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="px-6 py-8 text-center"
           >
             <h3 className="text-3xl font-bold text-white">

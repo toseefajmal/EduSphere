@@ -11,21 +11,14 @@ import {
   FiMapPin,
 } from "react-icons/fi";
 
-const SlideRight = (delay = 0) => ({
-  hidden: {
-    x: 60,
-    opacity: 0,
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      delay,
-      ease: "easeOut",
-    },
-  },
-});
+import {
+  SlideLeft,
+  SlideRight,
+  SlideUp,
+  SlideBottom,
+} from "../../utility/Animation.js";
+
+
 
 const Footer = () => {
   return (

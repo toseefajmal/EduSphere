@@ -76,7 +76,7 @@ const FeaturedCourses = () => {
           variants={SlideUp(0.2)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between"
         >
           <div>
@@ -84,7 +84,7 @@ const FeaturedCourses = () => {
               variants={SlideLeft(0.3)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="mb-3 inline-block rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-600"
             >
               Featured Courses
@@ -107,7 +107,7 @@ const FeaturedCourses = () => {
             variants={SlideRight(0.4)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="group flex w-fit items-center gap-2 font-semibold text-indigo-600 transition hover:text-indigo-800"
           >
             View All Courses
@@ -124,7 +124,7 @@ const FeaturedCourses = () => {
               variants={SlideUp(0.2 + index * 0.1)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.15 }}
+              viewport={{ once: true, amount: 0.15 }}
               className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
 

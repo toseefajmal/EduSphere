@@ -79,7 +79,7 @@ const Testimonials = () => {
           variants={SlideUp(0.2)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mx-auto max-w-3xl text-center"
         >
           <span className="inline-flex rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-600">
@@ -104,7 +104,7 @@ const Testimonials = () => {
           variants={SlideUp(0.4)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="relative mt-14"
         >
           <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 p-6 shadow-sm sm:p-10 lg:p-14">
@@ -136,7 +136,7 @@ const Testimonials = () => {
                   variants={SlideLeft(0.2)}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false, amount: 0.2 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   className="text-center lg:border-r lg:border-slate-200 lg:pr-10"
                 >
                   <div className="mx-auto h-28 w-28 overflow-hidden rounded-full border-4 border-white bg-slate-200 shadow-lg">
@@ -190,7 +190,7 @@ const Testimonials = () => {
                   variants={SlideRight(0.3)}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false, amount: 0.2 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   className="flex min-h-[250px] flex-col justify-center"
                 >
                   <div className="mb-5 text-5xl leading-none text-indigo-600">
@@ -213,7 +213,7 @@ const Testimonials = () => {
             variants={SlideBottom(0.5)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="mt-8 flex items-center justify-between"
           >
 
@@ -264,7 +264,7 @@ const Testimonials = () => {
           variants={SlideUp(0.6)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mt-14 grid gap-4 sm:grid-cols-3"
         >
 

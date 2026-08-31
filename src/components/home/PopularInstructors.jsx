@@ -66,14 +66,14 @@ const PopularInstructors = () => {
             variants={SlideLeft(0.2)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             {/* Badge */}
             <motion.span
               variants={SlideRight(0.3)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="mb-3 inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-600"
             >
               <FiAward />
@@ -85,7 +85,7 @@ const PopularInstructors = () => {
               variants={SlideUp(0.4)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl"
             >
               Learn From{" "}
@@ -99,7 +99,7 @@ const PopularInstructors = () => {
               variants={SlideBottom(0.5)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="mt-4 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg"
             >
               Meet our experienced instructors and learn from professionals
@@ -112,7 +112,7 @@ const PopularInstructors = () => {
             variants={SlideRight(0.5)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             type="button"
             className="group flex w-fit items-center gap-2 font-semibold text-indigo-600 transition hover:text-indigo-800"
           >
@@ -138,7 +138,7 @@ const PopularInstructors = () => {
               }
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.15 }}
+              viewport={{ once: true, amount: 0.15 }}
               whileHover={{
                 y: -8,
               }}
@@ -153,7 +153,7 @@ const PopularInstructors = () => {
                 variants={SlideUp(0.3 + index * 0.08)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.15 }}
+                viewport={{ once: true, amount: 0.15 }}
                 className="relative mx-auto mb-5 h-32 w-32"
               >
                 {/* Image Background */}
@@ -190,7 +190,7 @@ const PopularInstructors = () => {
                 variants={SlideUp(0.4 + index * 0.08)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.15 }}
+                viewport={{ once: true, amount: 0.15 }}
                 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-indigo-600"
               >
                 {instructor.name}
@@ -206,7 +206,7 @@ const PopularInstructors = () => {
                 variants={SlideUp(0.5 + index * 0.08)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.15 }}
+                viewport={{ once: true, amount: 0.15 }}
                 className="mt-4 flex items-center justify-center gap-2"
               >
                 <div className="flex items-center gap-1 rounded-full bg-yellow-50 px-3 py-1">
@@ -226,7 +226,7 @@ const PopularInstructors = () => {
                 variants={SlideBottom(0.5 + index * 0.08)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.15 }}
+                viewport={{ once: true, amount: 0.15 }}
                 className="mt-5 grid grid-cols-2 divide-x divide-slate-200 border-y border-slate-100 py-4"
               >
 

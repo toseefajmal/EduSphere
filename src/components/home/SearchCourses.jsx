@@ -167,7 +167,7 @@ const SearchCourses = () => {
           variants={SlideUp(0.2)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mx-auto max-w-3xl text-center"
         >
 
@@ -176,7 +176,7 @@ const SearchCourses = () => {
             variants={SlideRight(0.3)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-white px-4 py-2 shadow-sm"
           >
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-indigo-50">
@@ -196,7 +196,7 @@ const SearchCourses = () => {
             variants={SlideLeft(0.4)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="mt-6 text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
           >
             Learn Something
@@ -211,7 +211,7 @@ const SearchCourses = () => {
             variants={SlideBottom(0.5)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg"
           >
             Discover carefully crafted courses taught by industry experts.
@@ -225,7 +225,7 @@ const SearchCourses = () => {
           variants={SlideUp(0.4)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mx-auto mt-12 max-w-5xl"
         >
           <div className="rounded-3xl border border-slate-200 bg-white p-3 shadow-xl shadow-slate-200/60">
@@ -296,7 +296,7 @@ const SearchCourses = () => {
           variants={SlideLeft(0.3)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mt-16 flex flex-col justify-between gap-5 sm:flex-row sm:items-end"
         >
 
@@ -381,7 +381,7 @@ const SearchCourses = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{
-                    once: false,
+                    once: true,
                     amount: 0.15,
                   }}
                   whileHover={{
@@ -597,7 +597,7 @@ const SearchCourses = () => {
           variants={SlideBottom(0.4)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mt-14 flex justify-center"
         >
           <motion.button

@@ -24,7 +24,7 @@ const BecomeInstructor = () => {
               variants={SlideLeft(0.2)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="text-center lg:text-left"
             >
 
@@ -33,7 +33,7 @@ const BecomeInstructor = () => {
                 variants={SlideRight(0.3)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm"
               >
                 Become an Instructor
@@ -59,7 +59,7 @@ const BecomeInstructor = () => {
                 variants={SlideUp(0.4)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="mt-8 grid gap-4 sm:grid-cols-2"
               >
 
@@ -114,7 +114,7 @@ const BecomeInstructor = () => {
                 variants={SlideBottom(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="mt-9 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start"
               >
 
@@ -140,7 +140,7 @@ const BecomeInstructor = () => {
               variants={SlideRight(0.4)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="relative mx-auto w-full max-w-md"
             >
 
@@ -165,7 +165,7 @@ const BecomeInstructor = () => {
                 variants={SlideUp(0.6)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="absolute -bottom-5 -left-5 rounded-2xl bg-white p-4 shadow-xl sm:-left-8"
               >
                 <div className="flex items-center gap-3">
@@ -192,7 +192,7 @@ const BecomeInstructor = () => {
                 variants={SlideRight(0.7)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="absolute -right-4 top-8 rounded-2xl bg-white px-4 py-3 shadow-xl sm:-right-7"
               >
                 <div className="flex items-center gap-2">

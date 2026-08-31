@@ -61,7 +61,7 @@ const LearningStats = () => {
           variants={SlideUp(0.2)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mx-auto max-w-3xl text-center"
         >
           {/* Badge */}
@@ -69,7 +69,7 @@ const LearningStats = () => {
             variants={SlideLeft(0.3)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-indigo-100"
           >
             <FiTrendingUp />
@@ -81,7 +81,7 @@ const LearningStats = () => {
             variants={SlideRight(0.4)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
           >
             Learning That Makes a{" "}
@@ -95,7 +95,7 @@ const LearningStats = () => {
             variants={SlideBottom(0.5)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="mx-auto mt-5 max-w-2xl text-base leading-7 text-indigo-100 sm:text-lg"
           >
             Thousands of learners are building new skills, advancing their
@@ -119,7 +119,7 @@ const LearningStats = () => {
                 }
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className={`group relative px-6 py-10 text-center transition duration-300 hover:bg-white/10 ${
                   index !== stats.length - 1
                     ? "border-b border-white/20 lg:border-b-0 lg:border-r"
@@ -179,7 +179,7 @@ const LearningStats = () => {
           variants={SlideUp(0.5)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mt-12 flex flex-col items-center justify-center gap-3 text-center sm:flex-row"
         >
 

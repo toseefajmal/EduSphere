@@ -43,11 +43,7 @@ const Navbar = () => {
             viewport={{ once: true, amount: 0.2 }}
           >
             <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600">
-                <span className="text-lg font-bold text-white">
-                  E
-                </span>
-              </div>
+             
 
               <span className="text-2xl font-bold text-gray-900">
                 Edu<span className="text-indigo-600">Sphere</span>

@@ -39,11 +39,7 @@ const Footer = () => {
               to="/"
               className="mb-5 flex items-center gap-2"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600">
-                <span className="text-lg font-bold text-white">
-                  E
-                </span>
-              </div>
+              
 
               <span className="text-2xl font-bold">
                 Edu<span className="text-indigo-400">Sphere</span>
